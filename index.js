@@ -22,6 +22,7 @@ app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 2
 
 app.use(express.static('public'));
 
+
 app.use(routes)
 
 // listen for requests :)

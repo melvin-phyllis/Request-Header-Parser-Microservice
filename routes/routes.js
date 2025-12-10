@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // http://expressjs.com/en/starter/basic-routing.html
 routes.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname,"..", 'views', 'index.html'));
 });
 
 // your first API endpoint...
@@ -19,14 +19,8 @@ routes.get('/api/hello', function (req, res) {
 });
 
 
-routes.get("/whoami", (req, res) => {
-    /*  {
-        "ipaddress":req.ip,
-
-        "language":req.headers["accept-language"],
-
-        "software":req.headers["user-agent"]
-    } */
+routes.get("/api/whoami", (req, res) => {
+    
     res.json(
         {
             "ipaddress": req.ip,
